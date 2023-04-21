@@ -1,6 +1,7 @@
 <template>
     <div>
 
+
     </div>
 </template>
 
@@ -13,7 +14,10 @@ import axios from 'axios';
 
         data() {
             return {
-                joke_holder: {}
+
+                joke_holder: {},
+
+
             }
         },
 
@@ -29,14 +33,35 @@ import axios from 'axios';
 
                 console.log(response);
 
-                
 
+                if(response[`data`] !== undefined){
+
+
+                    for(let i = 0; i < response[`data`].length; i = i +1){
+
+                    this.joke_holder = response[`data`][i];
+
+                    this.$root.$emit(`joke_emitter`, this.joke_holder);
+
+                    console.log(this.joke_holder.replaceAll(" ", "_"));
+
+                    console.log(this.joke_holder.toUpperCase());
+
+                }
+
+                } else {
+
+                    console.log(`error`);
+                }
+            
             }).catch((error) => {
 
                 console.log(error);
 
             });
-        }
+        },
+
+        
         
     }
 </script>

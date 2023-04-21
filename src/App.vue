@@ -10,7 +10,13 @@
 
         <get-joke-button></get-joke-button>
 
+        <display-joke></display-joke>
 
+        <normal-joke-button></normal-joke-button>
+
+        <snake-joke-button></snake-joke-button>
+
+        <loud-joke-button></loud-joke-button>
       </section>
     </main>
     <footer class="page_footer">
@@ -23,12 +29,21 @@
 </template>
 
 <script>
+import DisplayJoke from './components/DisplayJoke.vue';
 import GetJokeButton from './components/GetJokeButton.vue';
+import NormalJokeButton from './components/NormalJokeButton.vue';
+import SnakeJokeButton from './components/SnakeJokeButton.vue';
+import LoudJokeButton from './components/LoudJokeButton.vue';
+
 export default {
   name: 'application_jokes',
   components: {
 
-    GetJokeButton
+    GetJokeButton,
+    DisplayJoke,
+    NormalJokeButton,
+    SnakeJokeButton,
+    LoudJokeButton
 
   }
 }
