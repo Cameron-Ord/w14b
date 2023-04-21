@@ -8,7 +8,7 @@
     <main class="page_main">
       <section class="section_main">
 
-
+        <get-joke-button></get-joke-button>
 
 
       </section>
@@ -23,10 +23,12 @@
 </template>
 
 <script>
-
+import GetJokeButton from './components/GetJokeButton.vue';
 export default {
   name: 'application_jokes',
   components: {
+
+    GetJokeButton
 
   }
 }
