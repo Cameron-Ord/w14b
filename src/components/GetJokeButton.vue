@@ -23,6 +23,20 @@ import axios from 'axios';
 
         methods:{
 
+            emitJoke(){
+
+
+                if(this.joke_holder !== undefined){
+
+                    this.$root.$emit(`joke_emit`, this.joke_holder);
+
+                    console.log(this.joke_holder);
+
+
+                }
+
+        
+            }
 
 
         },
@@ -45,16 +59,8 @@ import axios from 'axios';
                     this.joke_holder = response[`data`][0];
                     
                     this.emitJoke();
-
-                    console.log(this.joke_holder.replaceAll(" ", "_"));
-
-                    console.log(this.joke_holder.toUpperCase());
-
                 
 
-                } else {
-
-                    console.log(`error`);
                 }
             
             }).catch((error) => {
