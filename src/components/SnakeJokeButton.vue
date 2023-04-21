@@ -1,6 +1,7 @@
 <template>
     <div>
 
+        <h1>{{ joke }}</h1>
 
 
     </div>
@@ -13,17 +14,35 @@
          
                 data() {
                     return {
-                        snake_joke:{}
+                        joke:{}
                     }
                 },
       
             }
         },
 
+        methods:{
+
+            snake_joke_func(){
+
+
+
+
+
+            }
+
+            
+        },
+
+        snake_joke_emitter(){
+
+
+
+        },
+
 
         mounted(){
 
-            
         }
 
     }

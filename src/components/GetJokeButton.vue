@@ -21,6 +21,12 @@ import axios from 'axios';
             }
         },
 
+        methods:{
+
+
+
+        },
+
         mounted(){
 
             axios({
@@ -36,18 +42,15 @@ import axios from 'axios';
 
                 if(response[`data`] !== undefined){
 
-
-                    for(let i = 0; i < response[`data`].length; i = i +1){
-
-                    this.joke_holder = response[`data`][i];
-
-                    this.$root.$emit(`joke_emitter`, this.joke_holder);
+                    this.joke_holder = response[`data`][0];
+                    
+                    this.emitJoke();
 
                     console.log(this.joke_holder.replaceAll(" ", "_"));
 
                     console.log(this.joke_holder.toUpperCase());
 
-                }
+                
 
                 } else {
 
