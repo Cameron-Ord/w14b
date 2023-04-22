@@ -35,6 +35,7 @@
 
             normal_joke_emitter(){
 
+                  //emitting the joke as joke_selection//
 
                 this.$root.$emit(`joke_selection`, this.joke);
 
@@ -45,6 +46,8 @@
 
 
         mounted(){
+
+             //receiving the joke_emit from getjokebutton.vue and calling the respective function//
 
             this.$root.$on(`joke_emit`, this.normal_joke_func);
         },
