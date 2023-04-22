@@ -51,7 +51,7 @@ import axios from 'axios';
 
             }).then((response) => {
 
-                console.log(response);
+               
 
 
                 if(response[`data`] !== undefined){
@@ -65,7 +65,7 @@ import axios from 'axios';
             
             }).catch((error) => {
 
-                console.log(error);
+              
 
             });
         },
